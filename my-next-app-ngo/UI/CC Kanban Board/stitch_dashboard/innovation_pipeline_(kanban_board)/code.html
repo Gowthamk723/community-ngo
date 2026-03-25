@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="flex flex-col min-h-screen">
+<header class="bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-2 text-primary">
+<svg class="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">FutureProof</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Home</a>
+<a class="text-sm font-medium text-primary dark:text-primary" href="#">Projects</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Community</a>
+<a class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">
+                  search
+                </span>
+<input class="w-full pl-10 pr-4 py-2 rounded-lg bg-background-light dark:bg-background-dark border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary">
+<span class="material-symbols-outlined"> notifications </span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-gray-900 dark:text-white">Innovation Pipeline</h2>
+<p class="mt-1 text-gray-600 dark:text-gray-400">Track the progress of your projects through each stage of development.</p>
+</div>
+<div class="flex flex-wrap items-center gap-2 mb-6">
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-primary text-white">My Projects</button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-primary/20 dark:hover:bg-primary/30">
+              All Projects
+            </button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-primary/20 dark:hover:bg-primary/30">
+              By Cause
+            </button>
+<button class="px-3 py-1.5 text-sm font-medium rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-primary/20 dark:hover:bg-primary/30">
+              By NGO
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white px-2">Idea</h3>
+<div class="space-y-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> lightbulb </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Sustainable Farming Initiative</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 25%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> delete </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Waste Management Program</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 50%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> nature </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Wildlife Conservation Efforts</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 75%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white px-2">Refinement</h3>
+<div class="space-y-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> water_drop </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Water Purification System</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 30%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> groups </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Microfinance for Women</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 60%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> favorite </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Mental Health Support Program</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white px-2">Prototype</h3>
+<div class="space-y-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> school </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Educational App for Rural Areas</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> public </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Disaster Relief Coordination</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 20%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> restaurant </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Food Security Initiative</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 90%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white px-2">Pilot</h3>
+<div class="space-y-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> health_and_safety </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Community Health Outreach</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 70%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> laptop_mac </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Digital Literacy Training</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> diversity_3 </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Youth Empowerment Workshops</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 55%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-semibold text-gray-900 dark:text-white px-2">Scale</h3>
+<div class="space-y-4 p-2 rounded-lg bg-gray-100 dark:bg-gray-800/50">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> bolt </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Renewable Energy Solutions</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 95%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> home </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Affordable Housing Project</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-yellow-500 h-2 rounded-full" style="width: 40%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200">
+<span class="w-2 h-2 mr-1.5 bg-yellow-500 rounded-full"></span>
+                    Funding Pending
+                  </span>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 cursor-grab">
+<div class="flex items-center justify-between mb-2">
+<span class="material-symbols-outlined text-gray-500 text-lg"> local_florist </span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtN5yqqg_IbYq3DV_1g96Z-cKbkULoWJ7E_Lf0RXfQCCiS5hOTgsdtalA98xzd5eIQILBDMNcqTgvWvian3yvii5E8UGxMSygcniIynLXGRxzwN4PDTaXnqiMhL0rB_qYGdvdP7UucXrHvSiM50bBz8H2JNWpT8eeD9UpLyVlKfTDnr0XbzirzQGlBmvwKAUPtLtRojQ9f70DBDWZrkVcF_0hEPSYlAHhTb_TEIarwMpxbizGWUCURNMiRgPEJDaVjQldPobLZz5E");'></div>
+</div>
+<p class="font-medium text-gray-800 dark:text-gray-100">Environmental Awareness Campaign</p>
+<div class="w-full bg-gray-200 rounded-full h-2 mt-2 dark:bg-gray-700">
+<div class="bg-green-500 h-2 rounded-full" style="width: 65%"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 mt-2 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">
+<span class="w-2 h-2 mr-1.5 bg-green-500 rounded-full"></span>
+                    Funding Secured
+                  </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>FutureProof Mentorship Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style type="text/tailwindcss">
+    @keyframes pulse-badge {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+    }
+    .animate-pulse-badge {
+      animation: pulse-badge 2s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="text-primary size-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">FutureProof</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Programs</a>
+<a class="text-sm font-semibold text-primary dark:text-primary" href="#">Mentorship</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Community</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Resources</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90 transition-all">
+              Apply for Programs
+            </button>
+<div class="relative">
+<img alt="User profile picture" class="size-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFn0zANek418fB97MKdJiQclwepvL50vsM3Mns_mgHR6hTKgmPI8rjT70FUhWjRdq8sBcOAET3qSHFkhq5rduud1-DccfOy_weBhZvs8Nd2TMjE-xebnk3BWCrUdWtelWZSlOYIczO7CZeicfqA9AfBkR6bHCFgAmZXi6tG7Pv0yljcwG0FfpG9dMNhgqG1THACqpcOuCNmhAVMa_jzpSoyDXVz9gkYwiN1nnUNapeZZXFHgRrbIY_bE_MZw-AY_Swwn5Z3jUDMhc"/>
+<span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-green-500 ring-2 ring-white dark:ring-background-dark"></span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="text-center mb-12">
+<h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">Mentorship Journey Dashboard</h1>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Track your progress, earn badges, and climb the leaderboard!</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">trophy</span>
+              Your Journey Progress
+            </h2>
+<div class="mb-4">
+<h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-2">Overall Progression to Next Level</h3>
+<div class="flex items-center gap-3">
+<div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-4">
+<div class="bg-primary h-4 rounded-full flex items-center justify-end pr-2 font-bold text-xs text-white transition-all duration-700 ease-out" style="width: 70%;">
+                  70%
+                </div>
+</div>
+<span class="text-sm font-medium text-slate-600 dark:text-slate-400">Level 3 (2100/3000 XP)</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-3">Current Mission Goals</h3>
+<ul class="space-y-3 text-slate-600 dark:text-slate-400 text-base">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+                Complete 5 mentorship sessions: <span class="font-semibold text-primary">3/5</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0">check_circle</span>
+                Submit a project proposal: <span class="font-semibold text-primary">Completed</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-yellow-500 text-xl flex-shrink-0">pending</span>
+                Attend 2 skill-building workshops: <span class="font-semibold text-primary">1/2</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-yellow-500 text-xl flex-shrink-0">pending</span>
+                Engage in 3 community discussions: <span class="font-semibold text-primary">0/3</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-3">Earned Badges</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="flex flex-col items-center p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center animate-pulse-badge">
+<span class="material-symbols-outlined text-5xl text-yellow-500 mb-2">military_tech</span>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200">First Session</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">100 XP</p>
+</div>
+<div class="flex flex-col items-center p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
+<span class="material-symbols-outlined text-5xl text-slate-400 mb-2">military_tech</span>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200">Goal Setter</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">50 XP</p>
+</div>
+<div class="flex flex-col items-center p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center animate-pulse-badge">
+<span class="material-symbols-outlined text-5xl text-yellow-500 mb-2">workspace_premium</span>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200">Project Initiator</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">200 XP</p>
+</div>
+<div class="flex flex-col items-center p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center opacity-50 grayscale">
+<span class="material-symbols-outlined text-5xl text-slate-400 mb-2">military_tech</span>
+<p class="text-sm font-bold text-slate-800 dark:text-slate-200">Session Master</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Locked</p>
+</div>
+</div>
+<button class="mt-4 w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span class="material-symbols-outlined mr-2">military_tech</span>
+                View All Badges
+              </button>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Recommended Mentors</h2>
+<p class="text-slate-600 dark:text-slate-400 mb-4">Based on your goals in "Tech Innovation" and "Sustainable Development."</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<img alt="Dr. Anya Sharma" class="size-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Oi7lrLsKF2slobeSbPCudOLtEx_oBczSXgeznwy-LXep1IuKUPJfNnGf9pY67D4roihFBUP4Yr0A3EzOFPV2OxlT2nrV-Xb4vShzLwuRyrMMYNhHirz7FLfH6XdJ70gPsfVYMQgFz-9n-FkgPdaZjLVCrHCtdu7DIy-C5l6YdZDLlZsIfZftH6F17bD1wJEC1g2IKexP8uHpsIWjlmKSGOYwerE6oWcM8QkwdqsHzJTGBCjz6TMsjo5MlXDKyPLBWqVInJfAHyo"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Dr. Anya Sharma</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Sustainable Development Expert</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Ethan Carter" class="size-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcE4m9q1fvSL61rZVIcXZiMFQAIxaj76y_B9LKQ_-3IJVsdlaZ-ubMflGHL6k56oiIDJ-XMGVkUOlEM8GF-RPQ3TRmu4ghg6_HhcseF-KJT1MSJTX0iJI1Ez6XZ5yWoGwn78a_YyimklmSOg6abZYmMeN_MkAmG5-fZ0daJ9M_0NDD9Z2w9PVTAko6fZLureng_FFgzlsRlKeEKUYkfLhetzBcKTbL0DSqEToCaew5nBpl3PfzXGHUKX9RSBR1Xlngv-K8vVa-_ZM"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Ethan Carter</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Tech Innovation Lead</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<img alt="Sophia Clark" class="size-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUGQVhW7sAqO15fONObl_zYv8vl1uU_5H83YqotRMVHP9BUssCJY8EQjQnSCxw7seF4H9wVhouoItniQ5o9ONMSmPS98YwnCJVgXdu4W9xIXkaexLhOtqWfIwKs0G40bxZ_YKX1TC8DO6pnaPA1gIuyDCuV58Ed-PeF5qdno4vEDDftr_lkkEPw8EaRuPFu2zv80LxuSVRPXOhbXngrdUu5tIJtPLZR4MfwdxhNjiZXc3FVkpSw7WZUe_Uvy6IjbqQGOrgisASX0Y"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Sophia Clark</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Impact Investing Specialist</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+</div>
+<button class="mt-6 w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span>View All Mentors</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<div class="flex-shrink-0">
+<img alt="Illustration of a calendar" class="w-full max-w-[200px] md:max-w-[240px]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwuwvpavdlPVLt5RsUWFh5_iLwoagthP2P6ySYhXS8Ad6YjvkEyapgBaf4M76B4bjjtuPevz7PgslXpBV8ARLOQKabHEqzDw1hRC-5UblCQtm3nwJxt_YzCwbZHTJEb4OAufXHm3gfoG4UNDmX0o2IKivBJh3MnOYH0CASimh5FLD7E42F-F1RSLZK_rwLnT386KyM9ZnNVgzzwuyPCkG60LdE54r_oJAON2KH3EDohiCptFwgmW4KuUgrjIPLH2PDGju64Bd6AsA"/>
+</div>
+<div class="text-center md:text-left">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white">Your Upcoming Sessions</h2>
+<p class="mt-2 text-slate-600 dark:text-slate-400">You have no upcoming mentorship sessions. Schedule a session with a mentor to get started.</p>
+<div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+<button class="inline-flex items-center justify-center gap-2 rounded-lg h-11 px-6 bg-primary text-sm font-bold text-white shadow-sm hover:bg-primary/90 transition-all">
+<span class="material-symbols-outlined">calendar_add_on</span>
+<span>Request Mentorship</span>
+</button>
+<button class="inline-flex items-center justify-center rounded-lg h-11 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span>View Profiles</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-1">
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800 mb-8">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">leaderboard</span>
+              Leaderboard
+            </h2>
+<p class="text-slate-600 dark:text-slate-400 mb-4">Top 5 mentors and mentees based on engagement and achievements.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="text-xl font-bold text-primary">#1</span>
+<img alt="Emily Rodriguez" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeeGbSx6LM8VmPhnkZ886WNtu1hcL43-AE19iSO1sQJHJYwyDDYaZoQxU2zjJaxVu6Hkdexy7zx23rlCImRV0oTsj-xTjs3xCllB57nlzStPsn-EsT7rT2SNz6ZxE51Wgs3zW8QGGFwcgNWrHRa9NPrYjOnxYciT4blND5ocAjTMiV2twoVqN3IsH5WXSRjJTEHmRlCBAWRWqntZ0nS1IUPzvLp5ufpAqIE-IdYukXvUzPEweGlhCwBSgS65P6WzYES09SD2GnST0"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Emily Rodriguez (You)</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Level 3 · 2100 XP</p>
+</div>
+<span class="ml-auto material-symbols-outlined text-primary text-2xl">star</span>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="text-xl font-bold text-slate-600 dark:text-slate-400">#2</span>
+<img alt="Dr. Anya Sharma" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Oi7lrLsKF2slobeSbPCudOLtEx_oBczSXgeznwy-LXep1IuKUPJfNnGf9pY67D4roihFBUP4Yr0A3EzOFPV2OxlT2nrV-Xb4vShzLwuRyrMMYNhHirz7FLfH6XdJ70gPsfVYMQgFz-9n-FkgPdaZjLVCrHCtdu7DIy-C5l6YdZDLlZsIfZftH6F17bD1wJEC1g2IKexP8uHpsIWjlmKSGOYwerE6oWcM8QkwdqsHzJTGBCjz6TMsjo5MlXDKyPLBWqVInJfAHyo"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Dr. Anya Sharma</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Level 4 · 2800 XP</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="text-xl font-bold text-slate-600 dark:text-slate-400">#3</span>
+<img alt="Ethan Carter" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcE4m9q1fvSL61rZVIcXZiMFQAIxaj76y_B9LKQ_-3IJVsdlaZ-ubMflGHL6k56oiIDJ-XMGVkUOlEM8GF-RPQ3TRmu4ghg6_HhcseF-KJT1MSJTX0iJI1Ez6XZ5yWoGwn78a_YyimklmSOg6abZYmMeN_MkAmG5-fZ0daJ9M_0NDD9Z2w9PVTAko6fZLureng_FFgzlsRlKeEKUYkfLhetzBcKTbL0DSqEToCaew5nBpl3PfzXGHUKX9RSBR1Xlngv-K8vVa-_ZM"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Ethan Carter</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Level 3 · 1950 XP</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="text-xl font-bold text-slate-600 dark:text-slate-400">#4</span>
+<img alt="Sophia Clark" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUGQVhW7sAqO15fONObl_zYv8vl1uU_5H83YqotRMVHP9BUssCJY8EQjQnSCxw7seF4H9wVhouoItniQ5o9ONMSmPS98YwnCJVgXdu4W9xIXkaexLhOtqWfIwKs0G40bxZ_YKX1TC8DO6pnaPA1gIuyDCuV58Ed-PeF5qdno4vEDDftr_lkkEPw8EaRuPFu2zv80LxuSVRPXOhbXngrdUu5tIJtPLZR4MfwdxhNjiZXc3FVkpSw7WZUe_Uvy6IjbqQGOrgisASX0Y"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Sophia Clark</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Level 3 · 1820 XP</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<span class="text-xl font-bold text-slate-600 dark:text-slate-400">#5</span>
+<img alt="David Lee" class="size-12 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGN7z6dBLtDTF7Ayz15Czx3p58s40Gv8iAP9CJMxbIWXAvKzCd3aJOT1pL3vPlCMEJweOvdSe6NHRdAHmxRc1sRS6_Gjb5y5gapoJvPtWkicCr6mxT8QdepSiCoWmt-DJ5IpD6Py84nSrjMZpzaHvAg117tkK95nAb_quYf_Ob2lbywHzJaEbt-oDSSrIaNaqurHnv27I0ba1LfoYw2N20K0UNkFFObyKZKgeoNdzOztZXvesuph3GPpgds-xe-zmLr21eWCj4Ptk"/>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">David Lee</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Level 2 · 1500 XP</p>
+</div>
+</div>
+</div>
+<button class="mt-6 w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span>View Full Leaderboard</span>
+</button>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Recent Activity</h2>
+<ul class="space-y-4 text-sm text-slate-600 dark:text-slate-400">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0 mt-0.5">check_circle</span>
+<div>
+<p><span class="font-semibold text-slate-800 dark:text-slate-200">Completed session</span> with Dr. Anya Sharma. (+50 XP)</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">2 hours ago</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0 mt-0.5">edit_document</span>
+<div>
+<p><span class="font-semibold text-slate-800 dark:text-slate-200">Submitted project proposal</span> for "Green Tech Initiative". (+100 XP)</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Yesterday</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0 mt-0.5">workspace_premium</span>
+<div>
+<p><span class="font-semibold text-slate-800 dark:text-slate-200">Earned 'Project Initiator' badge!</span> (+200 XP)</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">3 days ago</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl flex-shrink-0 mt-0.5">event</span>
+<div>
+<p><span class="font-semibold text-slate-800 dark:text-slate-200">Registered for 'Future of AI' workshop.</span> (+20 XP)</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">5 days ago</p>
+</div>
+</li>
+</ul>
+<button class="mt-6 w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span>View All Activity</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-900/50 p-6 rounded-xl border border-slate-200 dark:border-slate-800">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Upcoming Events</h2>
+<div class="space-y-4">
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="flex-shrink-0 text-center">
+<p class="text-lg font-bold text-primary">15</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">JUL</p>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Workshop: Future of AI in Social Impact</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">10:00 AM - 12:00 PM, Online</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="flex-shrink-0 text-center">
+<p class="text-lg font-bold text-primary">22</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">JUL</p>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Mentor Group Session: Project Brainstorm</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">2:00 PM - 3:30 PM, Conference Room B</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+<div class="flex-shrink-0 text-center">
+<p class="text-lg font-bold text-primary">05</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">AUG</p>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-white">Community Mixer: Innovators Network</h3>
+<p class="text-sm text-slate-600 dark:text-slate-400">6:00 PM - 8:00 PM, FutureProof HQ</p>
+</div>
+<button class="ml-auto flex-shrink-0 size-8 rounded-full bg-primary/10 dark:bg-primary/20 text-primary text-sm hover:bg-primary/20 dark:hover:bg-primary/30 transition-all flex items-center justify-center">
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</div>
+<button class="mt-6 w-full inline-flex items-center justify-center rounded-lg h-10 px-6 bg-primary/10 dark:bg-primary/20 text-primary text-sm font-bold hover:bg-primary/20 dark:hover:bg-primary/30 transition-all">
+<span>View All Events</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

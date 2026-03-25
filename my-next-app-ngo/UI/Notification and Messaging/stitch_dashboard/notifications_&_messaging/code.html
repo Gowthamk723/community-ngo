@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FutureProof Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1193d4",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101c22",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen">
+<div class="flex flex-col flex-grow bg-background-light dark:bg-background-dark">
+<header class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3">
+<svg class="w-6 h-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">FutureProof</h1>
+</div>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Home</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Projects</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Community</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary" href="#">Resources</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="w-64 rounded-lg bg-gray-100 dark:bg-gray-800 border-none pl-10 pr-4 py-2 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Search" type="text"/>
+</div>
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-primary/10 dark:hover:bg-primary/20 text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAQVpsoPpGYF6Hgxs95LZFvCcl63a9l4G0elQRxIypRisqkK8Ak9jUTG4TZGfyqg99elxfapA3FbzyEUwcaaSh2xAiAf18Bn2Tin-Jt-ZRhIjZK1QZiWvBIZYJfS2K5YZVRPg0kHczi-c-pNn077SdkUH7LBESkj7HbU0nSa_6UnX-stm8CyJCrk-Wt3zT9xzyiGRlfZUg3oQyHZTuGdzTTtEG8Q_cK68cftxlsveeYcLBsGOOKbMICt0QskS0hbsTYolMSoNhO0k");'></div>
+</div>
+</header>
+<main class="flex-grow p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 flex flex-col gap-6">
+<div>
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white">Notifications &amp; Messaging</h2>
+<div class="mt-4 border-b border-gray-200 dark:border-gray-800">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">Notifications</a>
+<a class="border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 hover:border-gray-300 dark:hover:border-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" href="#">Messages</a>
+</nav>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex flex-col gap-2 p-4 rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Funding Alert</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Project 'Eco-Friendly Farming' has reached the funding goal.</p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="text-sm text-gray-500 dark:text-gray-400">2h ago</span>
+<label class="flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-8 h-4 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0.125rem] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:size-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Read</span>
+</label>
+</div>
+</div>
+<div class="mt-2 flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">info</span>
+Details
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">person_add</span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Mentor Assignment</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">You have been assigned as a mentor for 'Youth Empowerment Initiative'.</p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="text-sm text-gray-500 dark:text-gray-400">1d ago</span>
+<label class="flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-8 h-4 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0.125rem] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:size-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Read</span>
+</label>
+</div>
+</div>
+<div class="mt-2 flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">info</span>
+Details
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">update</span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Project Update</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Project 'Clean Water Access' is now in the implementation phase.</p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="text-sm text-gray-500 dark:text-gray-400">3d ago</span>
+<label class="flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-8 h-4 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0.125rem] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:size-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Read</span>
+</label>
+</div>
+</div>
+<div class="mt-2 flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">info</span>
+Details
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Proposal Review</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Your proposal for 'Sustainable Energy Solutions' has been reviewed.</p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="text-sm text-gray-500 dark:text-gray-400">5d ago</span>
+<label class="flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-8 h-4 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0.125rem] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:size-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Read</span>
+</label>
+</div>
+</div>
+<div class="mt-2 flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">info</span>
+Details
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 rounded-lg hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors duration-200">
+<div class="flex items-start gap-4">
+<div class="flex-shrink-0 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">assessment</span>
+</div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Progress Report</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Project 'Community Health Outreach' has received a new progress report.</p>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="text-sm text-gray-500 dark:text-gray-400">1w ago</span>
+<label class="flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="relative w-8 h-4 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[0.125rem] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:size-3.5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+<span class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Read</span>
+</label>
+</div>
+</div>
+<div class="mt-2 flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">info</span>
+Details
+</button>
+</div>
+</div>
+</div>
+</div>
+<aside class="flex flex-col bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+<div class="p-4 border-b border-gray-200 dark:border-gray-800">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500">search</span>
+<input class="w-full rounded-lg bg-background-light dark:bg-background-dark border-none pl-10 pr-4 py-2 text-sm text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-2 focus:ring-primary focus:outline-none" placeholder="Search messages" type="text"/>
+</div>
+</div>
+<div class="flex-grow overflow-y-auto">
+<div class="flex flex-col gap-2 p-4 hover:bg-primary/5 dark:hover:bg-primary/10 cursor-pointer border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA3eP3mktaZ3PLAlxpuqtZjPfSfA3GIjxcmoBMmFiUXYErph_8mItuC9rhbQYva5ebmPQgVmBaG0ypniPgDWn3RgIN_isrge0Hgqwjt3Eos1JauV_tB--dqrIOqOK3XHj-i_VUX_YxnoUtPXvrA7RK0mwXIHySJCNSagkhPU6seMkcwP30LGr6RTufKPIy-g7ByFDFd5s3YCyECTKwCwqBTtDY-gVIG1pOr8_G-vxxMQlcdg_OC3S9FvVWVIzTAoqcDpy80czJ4jAQ");'></div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Sarah Chen</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Great progress!</p>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">2h ago</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<img alt="Project image" class="rounded-md object-cover w-full h-24" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHEaQ7e6CzYXiV03PVtIpPY448NcISk2sf17VKwnwDkRgeGyi5N8KaOQlehlv0WoR6EdDQa3dRgJj80IoSj1FTp9tRIus7EZoTKcU73QQcQip2ePW3MT82uuxivwP9kcaKepnm2Wek8ufU1irHkZtJatWxIs9tcqr_B_fpuZ50tmXoRFEplFu6YhsNaiZD-wkvMgTWGtf_6F-_WTrjntjTRD2bUJ0_4g0IkLLjlxXyWCMcXVzgCAYVv-tvObfK-PqHrm--aV5FtXA"/>
+<div class="flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">done_all</span>
+Mark Read
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 hover:bg-primary/5 dark:hover:bg-primary/10 cursor-pointer border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBuJmLyyjbxxPWWgZLO18fLFbZSbNcYP2F6E99s4k4KzDTYSjB3rAjeC79PbYZFsbEyf97gcMsGx8HXA2A0Q8UHdVFxyUuoujZusNKyKKli1ULazzXHTIdHb9QAD7qf8XPymO0W2DFucXjnmpo8lV9LnMxnX5MO0zvP2Qxd2lmEdbmoX8aw7L7M0MrnYy50TEGKH8NYqqjTSr_K9qc2XQ-RcKXlDu4Z31YR8yri-5S2_p_U-lvsW0dyAKeAg9e6uDwy-qdndnwUmSU");'></div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">David Lee</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Let's schedule a call.</p>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">1d ago</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">done_all</span>
+Mark Read
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 hover:bg-primary/5 dark:hover:bg-primary/10 cursor-pointer border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnN241ocffGEh59q4oJRaUAjYtvjjm2Ii1QFCn7mqsDTnMkkcxPELsbAJsYuL2vv3zi2cofKPF2sf50ZpCmULOcmzhdiUw1DRee0LTdHMAP2WsMsX-Loq_dVmDtsWf9KO8qgbWrh03ejgCiS4XLb2KfAKSFYq1AAr-o20kWZ5xWzS-scctjdrp0IteM-KTkZMbJoAFnRdgXpC8LwMK9D5-reZIEM7ARDapu1EM1_SA028EudxFdSeV56Nmg7q4SKCy0xSdwLzI8Kc");'></div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Emily Rodriguez</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Thanks for the update.</p>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">3d ago</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<img alt="Document preview" class="rounded-md object-cover w-full h-24" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA78hNUkCxXF-qE8y3D_dQDMo06aBIr3FMwqaqARdPTA-p-HeFsJ5VCrEJJGjHlEDgkvjBB8sJc7fRlUaCTuLKRuy_kTCubzNVjE65PCYOVJ7bdUc-GkTNJq6G_1WneyxN-za-4O5f9A8msMomc5YTHsKlhaMhaFIuoPFPjxzpI76k_JZtHoQuj4ad5MSURLONr2fENgWF4Vx_nd3U62_7D5u-bSX3hRjDgw_25mQ2i2egdfmqXsW3ssKt48uXLrrPMr3JGanyoH-c"/>
+<div class="flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">done_all</span>
+Mark Read
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 hover:bg-primary/5 dark:hover:bg-primary/10 cursor-pointer border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAzZLEaFasrVx6QVn_tdsQMUgDOxLB_M0LrnRGHNfXLy6LheF639appZDnTecAuG1R-OKyTSfqfEgBbZvLCHA0h2HI_mq1cuAmAhmXY8_GOa4WNm6YtaUAapY74ZdQjRV7lBV3QfogV7Oa778_qLxE-C5r7Uhglua-GPqpC1G3YQ_10HyDtQLDgtbEGp3s-rFmvRjbcCR6lH_wrZnaJsPw0tPD_LsGC63ZI7-OqhTOKR5_SHzoan_No5rf94in5u7y8uWOv6sRxM2g");'></div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Michael Brown</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Proposal looks good.</p>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">5d ago</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">done_all</span>
+Mark Read
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 p-4 hover:bg-primary/5 dark:hover:bg-primary/10 cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBToG2xCq6h_9n-jXiTa74JEtaixHAOUpWCBDZWpjWeYnTecHJUnYljMac05mFN5BsYdru_8hjXtKaIQCtTzc1vabkN49s98Ct2rlYSwyyCEwAzIyi-QafYZAles2ns97A-XBsGnDTmHuc4P25yJdgIfitVQqF9N9pFdzGFFbGVbvkpUH8kzEOdae7WeitQyeEYEm4KWaB_ay_RXZTCqbm5xHOLk4JimsEeF6OjGC2A3GfSM__y5gbUHZlVLACtoRhPbFLgmQE9dzw");'></div>
+<div class="flex-grow">
+<p class="font-medium text-gray-900 dark:text-white">Jessica Wilson</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Report received.</p>
+</div>
+<div class="text-xs text-gray-500 dark:text-gray-400">1w ago</div>
+</div>
+<div class="flex flex-col gap-2 mt-2">
+<div class="flex gap-2 justify-end">
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">reply</span>
+Quick Reply
+</button>
+<button class="flex items-center gap-1 px-3 py-1 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600">
+<span class="material-symbols-outlined text-base">done_all</span>
+Mark Read
+</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-10 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-slate-200 dark:border-slate-800">
+<div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white" href="#">
+<svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+<span class="font-display">FutureProof</span>
+</a>
+<nav class="hidden items-center gap-6 text-sm font-medium lg:flex">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary" href="#">Home</a>
+<a class="text-primary font-semibold" href="#">Community</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary" href="#">Resources</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500">search</span>
+<input class="h-10 w-full min-w-[200px] rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark pl-10 pr-4 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Search" type="search"/>
+</div>
+<button class="hidden sm:flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary/90">
+              Start a Project
+            </button>
+<div class="size-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFYiNUGaOmPiNhRpqHm8cm47t5zNOQSorkv8Ol49JDcX8om1RptfuX-2Wu9X6gJeWzDhEO5kja8Qbnh9pjNTIOuT-2RMSQkgZldgyZvFlBc3ENwjXnp9FXkZaftOVvmeJZaPRvv-OqpuYCVqF77Mf_by2QyEg98PDb6fJifh5lawHjUAXi-XrAe72deF3ka8FCGjZFX7oARGo_XDqbjypVEsvEvOuhJYQ7IHtBCJN32xlS8oCIHDWvFHy_tCuaQnSMjMNXhNeAqlI");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<div class="mb-12 text-center">
+<h1 class="text-4xl font-black tracking-tighter text-slate-900 dark:text-white sm:text-5xl">
+              Community Impact &amp; Learning Hub
+            </h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400">
+              Explore the impact stories, key metrics, and case studies of both successful and unsuccessful projects. Learn from our collective experiences and contribute to a more effective future.
+            </p>
+</div>
+<div class="mb-8 flex flex-wrap items-center justify-center gap-3">
+<button class="flex h-10 items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800/60">
+<span>Cause</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800/60">
+<span>Region</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800/60">
+<span>Stage</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark px-4 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-800/60">
+<span>Year</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+<button class="flex h-10 items-center gap-2 rounded-lg bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary/90">
+<span class="material-symbols-outlined text-base">add_circle</span>
+              Submit a Project
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2">
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">Impact Stories</h2>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark p-4 border border-slate-200 dark:border-slate-800">
+<div class="w-full aspect-video rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDry4_J2NXaeynofraSoOMd2EfcvLhFtBOPw_LTJuA3VlFDTIpNXZ_NUh7575OXRk5dWxwYTKV4g9YK7aVDAc62wvN7YtU80dJtLVIxqlx4ln4qTCnYL_-xkqs9O0b7KVesLorImou2UlAHOMCxPRPyoJUsw3eFq_NZUIaRILsB2cLDMuGxG-SmJ2zX6jMDc2y83OFDsO_VGXxG-jzH9qT6jcsav_3mqOaVSpVcqS9HQpE6yoFzKxK1JWelMHRs5UFxdzxGvKJ-xAU");'></div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Reforestation Initiative in the Amazon</h3>
+<p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                    Planted over 10,000 trees, improving the local ecosystem and providing sustainable livelihoods.
+                  </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark p-4 border border-slate-200 dark:border-slate-800">
+<div class="w-full aspect-video rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDvIhWWzN7hVhDdh-hmNNrKvfZRzZslVSWk1lPSDx1n0EtVq38rxEpmCuSMmRELWynld5eRO8v0C_ax-WMA7aWTBheurbHvMVo4qF4qoIv9KOiM2zZ7TO_BSybR7XuXk1Oes-D5LxE3GA36FjLnENszqMYbB0oVqM1qoEg5Cg7n_ovJttuuD8dXpCJ0Sx43H1Qr-BHftjw7qW4AJ30omBvHsFjOkJ5SbQKKHTLWTlngPeYUpRjMI_HujvdBuU-SqbIOsSQbsBPIKHw");'></div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Educational Program in Rural India</h3>
+<p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                    Reached over 500 children, providing them with quality education and resources to succeed.
+                  </p>
+</div>
+</div>
+<div class="flex flex-col gap-4 rounded-lg bg-background-light dark:bg-background-dark p-4 border border-slate-200 dark:border-slate-800">
+<div class="w-full aspect-video rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDi5Z6S7wDeazR0EyUwxYjFX_7-kNY0R9DUoMyiaCm8xQ1PiglVDxtIrax27csOm_mKB-_nTKPPMO8hhxDduKOJKHmLwUxr7ItJuqmdB_8U4daJj826xW6N5pH-jRMA9tsSQ8LojtvQJl5s163ZIsfqFd57q5Brc7QOGSl074RRfSwHnsJROsr_g9o6auebXTqTx6Vo5bLBk3tSf8rjjbzU4THLXT9CKjuN_PrD3D5pdJGMgfYfgi5I6j8ew8h0ZRwd-a8GQqn_7w");'></div>
+<div>
+<h3 class="font-bold text-slate-900 dark:text-white">Community Housing Project in Haiti</h3>
+<p class="mt-1 text-sm text-slate-600 dark:text-slate-400">
+                    Provided safe and secure homes for 100 families, improving their quality of life.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">Key Metrics</h2>
+<div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark p-6 text-center">
+<p class="text-4xl font-black text-primary">250+</p>
+<p class="mt-1 text-sm font-medium text-slate-600 dark:text-slate-400">Projects Funded</p>
+</div>
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark p-6 text-center">
+<p class="text-4xl font-black text-primary">10,000+</p>
+<p class="mt-1 text-sm font-medium text-slate-600 dark:text-slate-400">Lives Impacted</p>
+</div>
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark p-6 text-center">
+<p class="text-4xl font-black text-primary">50,000+</p>
+<p class="mt-1 text-sm font-medium text-slate-600 dark:text-slate-400">Volunteer Hours</p>
+</div>
+</div>
+</div>
+<div class="mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              Case Studies: Learning from Failures
+            </h2>
+<div class="space-y-8">
+<div class="flex flex-col sm:flex-row items-start gap-6 rounded-lg bg-background-light dark:bg-background-dark p-4 border border-slate-200 dark:border-slate-800">
+<div class="w-full sm:w-1/3 aspect-video sm:aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcoMbfsAnJ2l1FJcC8E_F5CETMwN7-r6gefB8-vBymgTzprUeSCkuMUWERuCEMR9_Y1H_a1CNyILxC7wUA-jEcHKUAqu5DbdwrqGVAh5SCXjGOJ_OanN8M9V8JHhgnfJENu8YPeL5SuxRjnI64NjMqm6P2s9JOu31pM412LrfF0YPPBlvZ1KFISGlpo-sEUU7_qT-O7A1ivOtL0N0AVJvXGkmYE96GUs_91pORYz_F76VHm0hY5MjgrpeRSODBlHtI7dHtLbZOn1o");'></div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Microfinance Project in Sub-Saharan Africa</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                    This project aimed to provide microloans to small businesses but faced challenges due to high default rates and inadequate financial literacy training. Learn about the key takeaways and how we're adapting our approach.
+                  </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start gap-6 rounded-lg bg-background-light dark:bg-background-dark p-4 border border-slate-200 dark:border-slate-800">
+<div class="w-full sm:w-1/3 aspect-video sm:aspect-square rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCyEdc0lsxzlDQOvbXjk6kAO0zyrhfZnEc4ft_K2LF4swUZH0ogrZ_ba1nRXjoIjkSPPsZFGbB_auurNEifEqj3Ndw43k8ioaBwwekI9eGIpHnEc7JuOXQfTH_RseVn7WzaVhIZje89T0BzaSYFbiI7pohltbaxpQBKzA2rI8epv64ENKRuNoAPczg0y2OTwTKvhwCjN5RCqO0WPvKR-_XxAoFGY1i-gLqFCPxJrTIUf4AcPLXhlgAPC6x9A0AeEceq2XjnXpfQbfw");'></div>
+<div class="flex-1">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Clean Water Initiative in Southeast Asia</h3>
+<p class="mt-2 text-sm text-slate-600 dark:text-slate-400">
+                    This project sought to implement a new water filtration system but encountered issues with community adoption and maintenance. Explore the lessons learned and our revised strategy.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-1">
+<div class="rounded-lg bg-background-light dark:bg-background-dark p-8 border border-slate-200 dark:border-slate-800 sticky top-20">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+              Share Your Impact Story
+            </h2>
+<p class="mb-6 text-slate-600 dark:text-slate-400">
+              Help us grow our collective knowledge by submitting your own project's impact story or case study. All submissions will be reviewed by our moderation team.
+            </p>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="project-name">
+                Project Name
+              </label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark px-4 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" id="project-name" placeholder="E.g., Sustainable Farming Initiative" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="project-description">
+                Project Description
+              </label>
+<textarea class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark px-4 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[100px]" id="project-description" placeholder="Briefly describe your project and its main goals."></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="impact-metrics">
+                Key Impact Metrics (e.g., lives impacted, trees planted)
+              </label>
+<textarea class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark px-4 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary min-h-[80px]" id="impact-metrics" placeholder="Quantify your project's impact."></textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="project-image">
+                Project Image
+              </label>
+<input class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark p-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" id="project-image" type="file"/>
+<p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
+                Upload an image that best represents your project. (Max 5MB)
+              </p>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1" for="submission-type">
+                Submission Type
+              </label>
+<select class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-background-dark px-4 py-2 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" id="submission-type">
+<option>Impact Story (Successful Project)</option>
+<option>Case Study (Lessons from Failure)</option>
+</select>
+</div>
+<button class="h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white transition-colors hover:bg-primary/90">
+              Submit Project
+            </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

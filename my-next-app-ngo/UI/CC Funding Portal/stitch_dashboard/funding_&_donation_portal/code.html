@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1193d4",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "secondary-blue": "#0A2463",
+              "accent-green": "#8bc34a",
+              "accent-purple": "#9C27B0",
+            },
+            fontFamily: {
+              display: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<style type="text/tailwindcss">
+        html {
+          scroll-behavior: smooth;
+        }
+      </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative flex min-h-screen w-full flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/20 dark:border-primary/30 px-10 py-4">
+<div class="flex items-center gap-3 text-primary">
+<div class="h-8 w-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">FutureProof</h2>
+</div>
+<nav class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-gray-600 transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#home">Home</a>
+<a class="text-sm font-medium text-primary" href="#projects">Projects</a>
+<a class="text-sm font-medium text-gray-600 transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#community">Community</a>
+<a class="text-sm font-medium text-gray-600 transition-colors hover:text-primary dark:text-gray-300 dark:hover:text-primary" href="#about">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-primary/80">
+<span class="truncate">Start a Project</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzFnU119kAAXMNmUwvD7QIKYmd8JVjxRsX7t8pehqnZwWYMTe-fWPXkT4PiNebMnpsqOlgf-iAYnv-YVVg3D8mhqkNMrr1o34yWDHce_vT43FcE21b3RV7-DxIQt3fc9_7OKXEWzreX0IIT8Wll-ndVh28hzfU2gIVKx8_IwahWxrQOc8Dpdn8Et6kWyXD-Xg6o9-j8v74f06eDPxLAc8ftrGkvKug9kp8cBIkNkF_1M5QmvhXd6iB_SbMExN3XE_IFp0rwz6vanE");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-12">
+<div class="w-full max-w-7xl px-4 md:px-8">
+<section class="mb-10 text-center" id="home">
+<h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl">Funding Portal</h1>
+<p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Support innovative projects and make a difference.</p>
+</section>
+<div class="grid grid-cols-1 gap-12 lg:grid-cols-3">
+<section class="lg:col-span-2" id="projects">
+<div class="grid gap-12">
+<div class="project-card flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg transition-all hover:shadow-2xl dark:border-primary/30 dark:bg-background-dark dark:shadow-primary/10">
+<div class="flex flex-col gap-6 p-6 md:flex-row md:items-start md:gap-8">
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Project: Clean Water Initiative</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Provide clean drinking water to rural communities in Africa.</p>
+</div>
+<div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+<button class="expand-button flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+<span class="truncate">Sponsor This Stage</span>
+</button>
+<div class="flex -space-x-1 overflow-hidden">
+<img alt="" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA"/>
+<img alt="" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA"/>
+<img alt="" class="inline-block h-8 w-8 rounded-full ring-2 ring-white dark:ring-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA"/>
+<span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 text-xs font-medium text-primary ring-2 ring-white dark:ring-background-dark">+23</span>
+</div>
+</div>
+</div>
+<div class="aspect-video w-full flex-1 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAfpLOaYyGFEC-MM4Gb46CYDvjn4ZLEZEvF5k9eUrWlWAV8iEcVCgSwpxwTiRWVJAy7NVeiJEp3ZuBlEO9_ES6ruV_jLjAZGCMM7ijt1496cLUkawIBm7w4bPIIcsINlQMz7_7X55kr9jV1g5laY_i3z_5qOLi0fpL6P63xx7Jbr0Sm2TBWTgObaUIuC76rOzesvGS2CcFmCFq8gfveGCQ0pCnq78pddY6j_BMnfo8zp7-PwlxRgu3QobWk3QebIDD-KhDAUWEVRY");'></div>
+</div>
+<div class="border-t border-primary/20 bg-background-light/50 p-6 dark:border-primary/30 dark:bg-background-dark/50">
+<div class="flex items-center justify-between gap-4 text-sm">
+<p class="font-medium text-gray-700 dark:text-gray-300">Funding Progress</p>
+<p class="font-semibold text-primary">75%</p>
+</div>
+<div class="mt-2 h-2.5 w-full rounded-full bg-primary/20 dark:bg-primary/30">
+<div class="h-2.5 rounded-full bg-primary" style="width: 75%;"></div>
+</div>
+</div>
+<div class="project-details hidden p-6 pt-0">
+<h4 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Project Details:</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">This initiative aims to install water purification systems and build wells in remote villages, providing sustainable access to clean and safe drinking water. We will work with local communities to ensure the long-term success and maintenance of these systems. Your sponsorship helps cover the costs of equipment, logistics, and community training.</p>
+<ul class="mt-4 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400">
+<li>Phase 1: Needs assessment and site selection</li>
+<li>Phase 2: Installation of water purification systems</li>
+<li>Phase 3: Community training and education</li>
+<li>Phase 4: Ongoing maintenance and monitoring</li>
+</ul>
+<div class="mt-6 flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Share Project</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span>Add to Favorites</span>
+</button>
+</div>
+</div>
+</div>
+<div class="project-card flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg transition-all hover:shadow-2xl dark:border-primary/30 dark:bg-background-dark dark:shadow-primary/10">
+<div class="flex flex-col gap-6 p-6 md:flex-row md:items-start md:gap-8">
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Project: Education for All</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Ensure access to quality education for underprivileged children.</p>
+</div>
+<div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+<button class="expand-button flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+<span class="truncate">Sponsor This Stage</span>
+</button>
+</div>
+</div>
+<div class="aspect-video w-full flex-1 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnPmIoDKrAEbiJZLJxB1Hh3mpAq4QX8D4bzkGrQFtwuJvQ0sZhY2oUAYbkfLfiAKk_04fP6J4tF4vrolkELhf_z96oc-AfhjC48ZYRL8H8YM7ByWmbitgeIutAUhfddSJS_Q0CR4B9UxAAySdIb51QGOG8GiTWqbSnSiAZpb3xnvAus-yQSmEtz8GEKHY8I-0dpUHZowM8IrdAN8r0SeXSmqAxbIx2W4S7GVbf_tk0vVjnvpeTRMkQlRZGX3TqDUjg7GoDyCVTtNo");'></div>
+</div>
+<div class="border-t border-primary/20 bg-background-light/50 p-6 dark:border-primary/30 dark:bg-background-dark/50">
+<div class="flex items-center justify-between gap-4 text-sm">
+<p class="font-medium text-gray-700 dark:text-gray-300">Funding Progress</p>
+<p class="font-semibold text-primary">50%</p>
+</div>
+<div class="mt-2 h-2.5 w-full rounded-full bg-primary/20 dark:bg-primary/30">
+<div class="h-2.5 rounded-full bg-primary" style="width: 50%;"></div>
+</div>
+</div>
+<div class="project-details hidden p-6 pt-0">
+<h4 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Project Details:</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">This project focuses on providing educational resources, scholarships, and building new schools in underserved areas. Our goal is to break the cycle of poverty through education, empowering children with the knowledge and skills they need for a brighter future. Your contribution supports teachers, learning materials, and infrastructure development.</p>
+<ul class="mt-4 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400">
+<li>Phase 1: School construction and renovation</li>
+<li>Phase 2: Curriculum development and teacher training</li>
+<li>Phase 3: Scholarship programs for students</li>
+<li>Phase 4: Establishing community learning centers</li>
+</ul>
+<div class="mt-6 flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Share Project</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span>Add to Favorites</span>
+</button>
+</div>
+</div>
+</div>
+<div class="project-card flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg transition-all hover:shadow-2xl dark:border-primary/30 dark:bg-background-dark dark:shadow-primary/10">
+<div class="flex flex-col gap-6 p-6 md:flex-row md:items-start md:gap-8">
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Project: Healthcare Access</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Improve healthcare services in remote areas.</p>
+</div>
+<div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+<button class="expand-button flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+<span class="truncate">Sponsor This Stage</span>
+</button>
+</div>
+</div>
+<div class="aspect-video w-full flex-1 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwYD04fOerjB-oIe1GDSaCaIzOQGW0CjYTFbImkM4qwpbX6cvrJeInpL7bVe7un0C7DrDBVVgqnMRcmFqIFZJCnOFT8xVXGwXXOoClVX65Lennxnrv9awKfpZARQRmYWV8R7tZZXVecnT_8Kon817oNTakamfkC9wkIoFc5rLRYWlmFEP110OnNCayx4ipghMR1ZRCB8VGsWJVF_4dJGuwkiuQNi_6xOK8ts6wxRwXQkpw9rqHYQb-LiVkok0VOenv_0DdFF3ImP0");'></div>
+</div>
+<div class="border-t border-primary/20 bg-background-light/50 p-6 dark:border-primary/30 dark:bg-background-dark/50">
+<div class="flex items-center justify-between gap-4 text-sm">
+<p class="font-medium text-gray-700 dark:text-gray-300">Funding Progress</p>
+<p class="font-semibold text-primary">25%</p>
+</div>
+<div class="mt-2 h-2.5 w-full rounded-full bg-primary/20 dark:bg-primary/30">
+<div class="h-2.5 rounded-full bg-primary" style="width: 25%;"></div>
+</div>
+</div>
+<div class="project-details hidden p-6 pt-0">
+<h4 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Project Details:</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">This project focuses on establishing mobile clinics and providing essential medical supplies to remote and underserved communities. We aim to increase access to basic healthcare, vaccinations, and health education. Your support enables us to reach more people in need and improve health outcomes in vulnerable populations.</p>
+<ul class="mt-4 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400">
+<li>Phase 1: Mobilization of medical teams</li>
+<li>Phase 2: Distribution of essential medicines</li>
+<li>Phase 3: Health awareness campaigns</li>
+<li>Phase 4: Training local health workers</li>
+</ul>
+<div class="mt-6 flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Share Project</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span>Add to Favorites</span>
+</button>
+</div>
+</div>
+</div>
+<div class="project-card flex flex-col overflow-hidden rounded-xl border border-primary/20 bg-white shadow-lg transition-all hover:shadow-2xl dark:border-primary/30 dark:bg-background-dark dark:shadow-primary/10">
+<div class="flex flex-col gap-6 p-6 md:flex-row md:items-start md:gap-8">
+<div class="flex flex-[2_2_0px] flex-col justify-between gap-4">
+<div>
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">Project: Environmental Conservation</h3>
+<p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Protect endangered species and their habitats.</p>
+</div>
+<div class="mt-4 flex flex-col gap-4 sm:flex-row sm:items-center">
+<button class="expand-button flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+<span class="truncate">Sponsor This Stage</span>
+</button>
+</div>
+</div>
+<div class="aspect-video w-full flex-1 rounded-lg bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAuc-vDxLmsKCz68oRhVUc3Yc_DLDqAlGyrAv1GPe-4vSQTalDBZDzcAtT2g0ZwLzBaXyGaw9ykSUtsD8QpEGKYdkUZEh_5gZLEVo2bL6bMMrBNBGj-SnD1giEjJcG5j4XCs6TJfnps5mye93TVRrR7HMCwggyNwyMMh5-TB7YPP2XjAIljTvd8HSj08sCBF0rVV9rkGwqo9KJ35jzlpFi8xoIM3hAwt3gcHwkzeW1UJBQG3Kp59WVSrhghmUAeptr-3u0SnCK4bzM");'></div>
+</div>
+<div class="border-t border-primary/20 bg-background-light/50 p-6 dark:border-primary/30 dark:bg-background-dark/50">
+<div class="flex items-center justify-between gap-4 text-sm">
+<p class="font-medium text-gray-700 dark:text-gray-300">Funding Progress</p>
+<p class="font-semibold text-primary">90%</p>
+</div>
+<div class="mt-2 h-2.5 w-full rounded-full bg-primary/20 dark:bg-primary/30">
+<div class="h-2.5 rounded-full bg-primary" style="width: 90%;"></div>
+</div>
+</div>
+<div class="project-details hidden p-6 pt-0">
+<h4 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Project Details:</h4>
+<p class="text-sm text-gray-600 dark:text-gray-400">This project aims to protect critical ecosystems and endangered species through habitat restoration, anti-poaching efforts, and community engagement. We work to mitigate human-wildlife conflict and promote sustainable conservation practices. Your contribution helps fund wildlife monitoring, ranger patrols, and reforestation initiatives.</p>
+<ul class="mt-4 list-disc pl-5 text-sm text-gray-600 dark:text-gray-400">
+<li>Phase 1: Wildlife monitoring and research</li>
+<li>Phase 2: Anti-poaching patrols and enforcement</li>
+<li>Phase 3: Habitat restoration and reforestation</li>
+<li>Phase 4: Community education and sustainable livelihoods</li>
+</ul>
+<div class="mt-6 flex flex-col sm:flex-row gap-4">
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">share</span>
+<span>Share Project</span>
+</button>
+<button class="flex items-center justify-center gap-2 rounded-lg bg-primary/20 px-5 py-2.5 text-sm font-bold text-primary shadow-sm transition-colors hover:bg-primary/30">
+<span class="material-symbols-outlined text-base">favorite_border</span>
+<span>Add to Favorites</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="lg:col-span-1" id="community">
+<div class="sticky top-12 flex flex-col gap-8">
+<div class="rounded-xl border border-primary/20 bg-white p-6 shadow-lg dark:border-primary/30 dark:bg-background-dark">
+<h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Your Impact</h3>
+<div class="flex items-center gap-4 rounded-lg bg-primary/10 p-4">
+<span class="material-symbols-outlined text-3xl text-primary">military_tech</span>
+<div>
+<p class="text-sm font-medium text-gray-700 dark:text-gray-300">Impact Points</p>
+<p class="text-lg font-bold text-primary">1,250</p>
+</div>
+</div>
+<div class="mt-6">
+<h4 class="mb-3 text-lg font-semibold text-gray-900 dark:text-white">Badges Earned</h4>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-4xl text-yellow-500">star</span>
+<p class="text-xs font-medium text-gray-600 dark:text-gray-400">First Sponsor</p>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-4xl text-gray-400">military_tech</span>
+<p class="text-xs font-medium text-gray-600 dark:text-gray-400">Clean Water Champion</p>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-4xl text-green-500">eco</span>
+<p class="text-xs font-medium text-gray-600 dark:text-gray-400">Eco Warrior</p>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-4xl text-purple-500">school</span>
+<p class="text-xs font-medium text-gray-600 dark:text-gray-400">Education Advocate</p>
+</div>
+</div>
+</div>
+<button class="mt-6 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary/80">
+<span class="material-symbols-outlined text-base">description</span>
+<span class="truncate">View Impact Report</span>
+</button>
+</div>
+<div class="rounded-xl border border-primary/20 bg-white p-6 shadow-lg dark:border-primary/30 dark:bg-background-dark">
+<h3 class="mb-4 text-xl font-bold text-gray-900 dark:text-white">Top Sponsors Leaderboard</h3>
+<ol class="divide-y divide-primary/10 dark:divide-primary/20">
+<li class="flex items-center justify-between py-3">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-primary">1.</span>
+<div class="h-8 w-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA");'></div>
+<span class="font-medium text-gray-700 dark:text-gray-300">Alice Smith</span>
+</div>
+<span class="font-semibold text-primary">2,500 pts</span>
+</li>
+<li class="flex items-center justify-between py-3">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-primary">2.</span>
+<div class="h-8 w-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA");'></div>
+<span class="font-medium text-gray-700 dark:text-gray-300">Bob Johnson</span>
+</div>
+<span class="font-semibold text-primary">2,100 pts</span>
+</li>
+<li class="flex items-center justify-between py-3">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-primary">3.</span>
+<div class="h-8 w-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA");'></div>
+<span class="font-medium text-gray-700 dark:text-gray-300">Charlie Brown</span>
+</div>
+<span class="font-semibold text-primary">1,800 pts</span>
+</li>
+<li class="flex items-center justify-between py-3">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-primary">4.</span>
+<div class="h-8 w-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzFnU119kAAXMNmUwvD7QIKYmd8JVjxRsX7t8pehqnZwWYMTe-fWPXkT4PiNebMnpsqOlgf-iAYnv-YVVg3D8mhqkNMrr1o34yWDHce_vT43FcE21b3RV7-DxIQt3fc9_7OKXEWzreX0IIT8Wll-ndVh28hzfU2gIVKx8_IwahWxrQOc8Dpdn8Et6kWyXD-Xg6o9-j8v74f06eDPxLAc8ftrGkvKug9kp8cBIkNkF_1M5QmvhXd6iB_SbMExN3XE_IFp0rwz6vanE");'></div>
+<span class="font-medium text-gray-700 dark:text-gray-300">You (Current)</span>
+</div>
+<span class="font-semibold text-primary">1,250 pts</span>
+</li>
+<li class="flex items-center justify-between py-3">
+<div class="flex items-center gap-3">
+<span class="text-lg font-bold text-primary">5.</span>
+<div class="h-8 w-8 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe92NlTuFKR2uYAt0hClT4BS6tNIThoArBA04CsTnqnW092iGBl-idmivHivv0J5IuPDWL_NtLmt8uQ8-exHzc-M2GA99LMs-_gfUXyeuwq8w2rD1oBM1KQHyBX69dkrntl527jzC7kWya0QROEnMytUIJzAqPrWgwg1R-rARt9DZI9kkWrW5eCghBKlOc6tpeASgyl7wUo9WgfHLq0BlDTDNBFoKy1xLVwWy9dfRYlliJDCldAIvR-dUC0lCzrROBIXE_04nr7FA");'></div>
+<span class="font-medium text-gray-700 dark:text-gray-300">Diana Prince</span>
+</div>
+<span class="font-semibold text-primary">1,100 pts</span>
+</li>
+</ol>
+</div>
+</div>
+</section>
+</div>
+<section class="mt-12 flex flex-col items-center gap-4 rounded-xl bg-primary/10 p-8 text-center dark:bg-primary/20" id="about">
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white">Secure Payments</h3>
+<p class="max-w-md text-gray-600 dark:text-gray-400">We partner with trusted payment gateways to ensure your donations are safe and secure.</p>
+<div class="mt-4 flex flex-wrap items-center justify-center gap-6 opacity-70">
+<img alt="Stripe" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChHMH5l9MZ30B0Fq4_T0SbuDCWP6qcvHX9ujeCmD1XmfDA8xIU6T3svQ8ewo8TgPsA_Ju2qpzB6evb0-c5upspM2VA6Tb7Y878wzXjdPH9Jt9kTwmExJMtUpusehT_vTq2OX-BX2edPHUzgThrlOQJQS-Qg4hZsY7uGb9E_25XNDnqDSdbv_zPHlJKgWurCD8E7lUrqp4ezFgAFlKGC7v_aueYjo7lossTZSN8NOhrrqM__vL7YRahKKIPQgSessLEQi2RWUmWOUU"/>
+<img alt="Razorpay" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB02Lk9mU3v-x7gUpoKGdYoZpPSN9gvcxCecriQMAZ3pF08VMioKA_ZI8shC7oVkxy2ppKVVX5Qk4gaY5OSmutPo6HBMlPcz2l8W9_mn0C5gvpJRhjsX1_mCTrFobtkVftjcED6w3mCBCweTYiXak47oEI_Ly73vEdogFbjLyzGkLVWqAUIK9kmFSkdqiPDtNsZfzWVGvxjn_tY7HFlPDUiYGkAcebTDzOfIbOWAQlunyoozzvCGki1Az5kHZfzKnHeK57lrk6K-vM"/>
+<img alt="PayPal" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAspomABZDJK6jgEHJWSZzaKo3fYSSWr0oZ01pptynrx8m-Ng2jo0vpuF48fddkfObMVxcxoKWvk7EXNjZE9lM3MYZwACDrhUpojHjj6-jhvn130UVLuKkftoHQO3Fci4ShHjBcaYhA8ehHqrrAK4JOIcvPGJrYl3X-wzLSoRjWNeh3OFhBfQicy5hw78fwxe4IHJhXhX22vQsK74dGNE9RklJFSRcCbDT8_53-plBxJv0sMrz8tGgeVJEK03XaNvYDGMf_stdtLUk"/>
+</div>
+</section>
+</div>
+</main>
+</div>
+<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".expand-button").forEach((button) => {
+          button.addEventListener("click", (event) => {
+            const projectCard = event.target.closest(".project-card");
+            const projectDetails = projectCard.querySelector(".project-details");
+            projectDetails.classList.toggle("hidden");
+            projectDetails.classList.toggle("animate-in");
+            projectDetails.classList.toggle("fade-in-from-top");
+            projectDetails.classList.toggle("slide-in-from-top");
+          });
+        });
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+    </script>
+
+</body></html>

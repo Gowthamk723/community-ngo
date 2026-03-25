@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NGO FutureProof Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style type="text/tailwindcss">
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+<div class="flex min-h-screen">
+<div class="relative hidden w-1/2 flex-col items-center justify-center bg-cover bg-center lg:flex" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAYZpSqGlpvrC5K5SJzt7ZnjYZhHSAkGsDmSv3rOnTEKklH6y3mVv0eRpco0bsEQIfCpYgQtrHZH13289S0X6OfpX3jcE3a689ic2MCh71PEsla7Nna7_CLwG-DzgpVGAWTov2C5-81EIS_nnjPcj23jxpcSnhfwMSMQs-0EihThwhGOPTwL3s-xc0Bc1ZLTGoxK1w3pLBs9uqlfMnKh7X0G2SgoQFr_Bjxf_SRWGmh_e-Ns5jHDXH5ntwbopiW19iyvcAlEDiayLM')">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="relative z-10 p-8 text-white text-center">
+<h1 class="text-5xl font-bold">NGO FutureProof</h1>
+<p class="mt-4 text-lg">An Innovation Pipeline Platform</p>
+</div>
+</div>
+<div class="flex w-full items-center justify-center p-8 lg:w-1/2">
+<div class="w-full max-w-md space-y-6">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-gray-800">Empowering Ideas for Social Impact</h2>
+<p class="mt-2 text-gray-600">Login to your account</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700" for="email">Email address</label>
+<input autocomplete="email" class="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm" id="email" name="email" required="" type="email"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="password">Password</label>
+<input autocomplete="current-password" class="mt-1 block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm" id="password" name="password" required="" type="password"/>
+</div>
+<div class="flex items-center justify-end">
+<div class="text-sm">
+<a class="font-medium text-blue-600 hover:text-blue-500" href="#">Forgot Password?</a>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="role">Role</label>
+<select class="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm" id="role" name="role">
+<option>Innovator</option>
+<option>NGO</option>
+<option>Donor</option>
+<option>Mentor</option>
+<option>Admin</option>
+</select>
+</div>
+<div class="space-y-4 text-center">
+<p class="text-lg font-medium text-gray-700">Please confirm your details:</p>
+<p class="text-gray-600">Email: <strong id="confirm-email"></strong></p>
+<p class="text-gray-600">Role: <strong id="confirm-role"></strong></p>
+</div>
+<div>
+<button class="group relative flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-3 text-sm font-medium text-white shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-all duration-300 ease-in-out" type="submit">
+              Login
+            </button>
+</div>
+</form>
+<p class="mt-8 text-center text-sm text-gray-600">
+          Don't have an account?
+          <a class="font-medium text-blue-600 hover:text-blue-500" href="#">
+            Sign Up
+          </a>
+</p>
+</div>
+</div>
+</div>
+<script>
+    // This script is purely for populating the confirmation fields based on the input.
+    // It does not handle multi-step logic anymore as the layout is single-page.
+    const emailInput = document.getElementById('email');
+    const roleSelect = document.getElementById('role');
+    const confirmEmail = document.getElementById('confirm-email');
+    const confirmRole = document.getElementById('confirm-role');
+    function updateConfirmation() {
+        confirmEmail.textContent = emailInput.value;
+        confirmRole.textContent = roleSelect.value;
+    }
+    emailInput.addEventListener('input', updateConfirmation);
+    roleSelect.addEventListener('change', updateConfirmation);
+    // Initial update in case fields are pre-filled
+    updateConfirmation();
+</script>
+
+</body></html>
